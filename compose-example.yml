@@ -1,0 +1,14 @@
+services:
+  ycast:
+    container_name: ycast
+    image: ofboir/ycast:1.1.0
+    restart: unless-stopped
+    environment:
+      TZ: Europe/Paris
+      YCAST_LISTENING_ADDRESS: 0.0.0.0
+      YCAST_LISTENING_PORT: 8010
+      YCAST_STATIONS_LIST: /ycast-data/stations.yml
+    volumes:
+      - ./data:/ycast-data
+    expose:
+      - 8010
