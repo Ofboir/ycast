@@ -14,5 +14,5 @@ if [ -n "$YCAST_STATIONS_LIST" ]; then
   CMD="$CMD -c $YCAST_STATIONS_LIST"
 fi
 
-echo "Exécution de la commande: $CMD"
+echo "Command: $CMD"
 exec $CMD
